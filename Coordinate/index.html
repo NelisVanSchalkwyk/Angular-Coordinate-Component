@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <style>
+        /* This helps the ng-show/ng-hide animations start at the right place. */
+        /* Since Angular has this but needs to load, this gives us the class early. */
+        .ng-hide {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div data-ng-controller="MainController as main">
+        <div>
+            <!--<coordinate data-coordinate-format="DD" data-coordinate-type="lat" data-ng-model="main.lat"></coordinate>
+            <input type="number" data-coordinate data-coordinate-format="DD" data-coordinate-type="lat" data-ng-model="main.lat" /><br />
+            <coordinate data-coordinate-format="DMS" data-coordinate-type="lat" data-ng-model="main.lat"></coordinate>-->
+            <coordinate data-coordinate-format="DDM" data-coordinate-type="lat" data-ng-model="main.lat"></coordinate>
+            DD: {{ main.lat | coordinate: 'DD': 'lat'}}<br />
+            DMS: {{ main.lat | coordinate: 'DMS': 'lat'}}<br />
+            DDM: {{ main.lat | coordinate: 'DDM': 'lat'}}<br />
+        </div>
+        <div>
+            <!--<coordinate data-coordinate-format="DD" data-coordinate-type="lng" data-ng-model="main.lng"></coordinate>
+            <input type="text" data-coordinate data-coordinate-format="DD" data-coordinate-type="lng" data-ng-model="main.lng" /><br />
+            <coordinate data-coordinate-format="DMS" data-coordinate-type="lng" data-ng-model="main.lng"></coordinate>-->
+            <coordinate data-coordinate-format="DDM" data-coordinate-type="lng" data-ng-model="main.lng"></coordinate>
+            DD: {{ main.lng | coordinate: 'DD': 'lng'}}<br />
+            DMS: {{ main.lng | coordinate: 'DMS': 'lng'}}<br />
+            DDM: {{ main.lng | coordinate: 'DDM': 'lng'}}
+        </div>
+    </div>
+    
+    <script src="Scripts/functions.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-sanitize.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/common/coordinate/coordinate.module.js"></script>
+    <script src="app/common/coordinate/coordinate.constant.js"></script>
+    <script src="app/common/coordinate/coordinate.service.js"></script>
+    <script src="app/common/coordinate/coordinate.directive.js"></script>
+    <script src="app/common/coordinate/coordinate.filter.js"></script>
+</body>
+</html>
