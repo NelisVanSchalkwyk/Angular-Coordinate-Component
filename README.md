@@ -1,2 +1,2 @@
 # Angular Coordinate Component
-An Angular component for entering and displaying coordinates in different formats.
+An Angular component for entering and displaying geographical coordinates in different formats.
