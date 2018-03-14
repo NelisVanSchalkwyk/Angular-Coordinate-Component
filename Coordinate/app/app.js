@@ -11,7 +11,7 @@
         var vm = this;
 
         vm.lat = -25.938285;
-        vm.lng = 28.193479
+        vm.lng = 28.193479;
 
         $scope.$watch(function () { return vm.lat; }, function () {
             $log.debug('lat:' + vm.lat);
